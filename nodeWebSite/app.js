@@ -33,6 +33,12 @@ app.get('/users', user.list);
 var about = require('./routes/about');
 app.get('/about', about.about);
 
+var works = require('./routes/works');
+app.get('/works', works.list);
+
+var contact = require('./routes/contact');
+app.get('/contact', contact.info);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
